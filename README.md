@@ -4,7 +4,4 @@ A new Flutter project.
 
 ## Getting Started
 
-![](Main Screen.png)
-![](New Task.png)
-![](Report Screen.png)
-![](Task Type.png)
+![](https://github.com/muhammadnumanlatif/getx_todo/blob/master/Main%20Screen.png)

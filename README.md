@@ -4,4 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-![Alt text](Main Screen.png "Optional Title")
+![](Main Screen.png)
+![](New Task.png)
+![](Report Screen.png)
+![](Task Type.png)

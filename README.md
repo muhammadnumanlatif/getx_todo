@@ -4,4 +4,6 @@ A new Flutter project.
 
 ## Getting Started
 
-![Alt text](\getx_todo\Main Screen.png "Optional Title")
+<div align="center">
+    <img src="C:\getx_todo\Main Screen.png" width="400px"</img> 
+</div>

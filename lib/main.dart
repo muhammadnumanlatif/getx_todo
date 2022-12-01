@@ -5,12 +5,15 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 import 'package:getx_todo/app/data/services/storage/services.dart';
 import 'package:getx_todo/app/modules/home/binding.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'app/modules/home/view.dart';
 
 void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
   await Get.putAsync(() => StorageService().init());
+  MobileAds.instance.initialize();
   runApp(const MyApp());
 }
 

@@ -3,8 +3,11 @@ import 'package:get/get.dart';
 import 'package:getx_todo/app/core/utils/extentions.dart';
 import 'package:getx_todo/app/core/values/colors.dart';
 import 'package:getx_todo/app/modules/home/controller.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:intl/intl.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
+
+import '../../data/services/admob_service.dart';
 
 class ReportPage extends StatelessWidget {
   ReportPage({Key? key}) : super(key: key);
@@ -42,6 +45,27 @@ final homeCtrl = Get.find<HomeController>();
                 horizontal: 4.0.wp,
               ),
               child: Divider(thickness: 2,),
+            ),
+            SizedBox(
+              height: 100,
+              width: double.infinity,
+              child: AdWidget(
+                ad: BannerAd(
+                  adUnitId: AdmobService.getBannerAdUnitId()!,
+                 //adUnitId: "ca-app-pub-3940256099942544/6300978111",
+                  size: AdSize.largeBanner,
+                  request: AdRequest(),
+                  listener: BannerAdListener(
+                    onAdLoaded: (Ad ad) =>print("Ad loaded"),
+                    onAdFailedToLoad: (Ad ad, LoadAdError error){
+                      ad.dispose();
+                      print("Ad failed to load: $error");
+                    },
+                    onAdOpened: (Ad ad)=>print("Ad opened"),
+                    onAdClosed: (Ad ad)=>print("Ad closed"),
+                  ),
+                )..load(),
+              ),
             ),
 
             Padding(

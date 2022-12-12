@@ -14,6 +14,7 @@ void main() async{
   await GetStorage.init();
   await Get.putAsync(() => StorageService().init());
   MobileAds.instance.initialize();
+  await PurchaseApi.init();
   runApp(const MyApp());
 }
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Todo List using Getx',
       debugShowCheckedModeBanner: false,
-      home:const HomePage(),
+      home: HomePage(),
       initialBinding: HomeBinding(),
       builder: EasyLoading.init(),
     );

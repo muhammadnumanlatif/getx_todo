@@ -7,7 +7,6 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:intl/intl.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
-import '../../data/services/admob_service.dart';
 
 class ReportPage extends StatelessWidget {
   ReportPage({Key? key}) : super(key: key);
@@ -51,7 +50,7 @@ final homeCtrl = Get.find<HomeController>();
               width: double.infinity,
               child: AdWidget(
                 ad: BannerAd(
-                  adUnitId: AdmobService.getBannerAdUnitId()!,
+                  adUnitId: "ca-app-pub-9190785688707604/6252397285",
                  //adUnitId: "ca-app-pub-3940256099942544/6300978111",
                   size: AdSize.largeBanner,
                   request: AdRequest(),
